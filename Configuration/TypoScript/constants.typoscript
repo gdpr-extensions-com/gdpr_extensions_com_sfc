@@ -1,0 +1,29 @@
+plugin.tx_gdprextensionscomsfc_gdprsfc {
+    view {
+        # cat=plugin.tx_gdprextensionscomsfc_gdprsfc/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:gdpr_extensions_com_sfc/Resources/Private/Templates/
+        # cat=plugin.tx_gdprextensionscomsfc_gdprsfc/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:gdpr_extensions_com_sfc/Resources/Private/Partials/
+        # cat=plugin.tx_gdprextensionscomsfc_gdprsfc/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:gdpr_extensions_com_sfc/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_gdprextensionscomsfc_gdprsfc//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}
+
+module.tx_gdprextensionscomsfc_gdprmanager {
+    view {
+        # cat=module.tx_gdprextensionscomsfc_gdprmanager/file; type=string; label=Path to template root (BE)
+        templateRootPath = EXT:gdpr_extensions_com_sfc/Resources/Private/Backend/Templates/
+        # cat=module.tx_gdprextensionscomsfc_gdprmanager/file; type=string; label=Path to template partials (BE)
+        partialRootPath = EXT:gdpr_extensions_com_sfc/Resources/Private/Backend/Partials/
+        # cat=module.tx_gdprextensionscomsfc_gdprmanager/file; type=string; label=Path to template layouts (BE)
+        layoutRootPath = EXT:gdpr_extensions_com_sfc/Resources/Private/Backend/Layouts/
+    }
+    persistence {
+        # cat=module.tx_gdprextensionscomsfc_gdprmanager//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}
