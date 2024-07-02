@@ -21,7 +21,7 @@
             max-height: 600px;
         }
 
-        #gdpr-extensions-com-cookie-container div.privacy-msg {
+        #gdpr-extensions-com-cookie-container div.gdpr-privacy-msg {
             max-width: 1020px;
             padding: 18px;
             width: 100% !important;
@@ -31,7 +31,7 @@
             margin: 30px;
         }
 
-        #gdpr-extensions-com-cookie-container div.privacy-msg .wraper {
+        #gdpr-extensions-com-cookie-container div.gdpr-privacy-msg .wraper {
             width: 100%;
             border-radius: 6px;
             padding: 6% 20px;
@@ -296,11 +296,13 @@
             overflow-y: auto;
         }
         #gdpr-extensions-com-cookie-container .gdpr-crautor-content {
-            position: absolute;
-            top: 0;
             width: 100%;
             max-width: 1400px;
 
+        }
+
+        .tx-gdpr-extensions-com-sfc #gdpr-extensions-com-cookie-container .gdprInner {
+            max-height: unset;
         }
     </style>
 
@@ -331,14 +333,14 @@
             It internally uses cookies to remember user choices about privacy settings.
 
             Classes:
-            - privacy-msg: Used to style privacy message displayed within iframe
+            - gdpr-privacy-msg: Used to style privacy message displayed within iframe
             - toggleButton : Used by buttons which enables/disables specific services
 
             Methods:
             - setConsentStatus(service,status) : Sets the consent status for a service and stores it as a cookie.
             - deleteCookie(name) : Deletes the specified cookie.
             - getConsentStatuses(): Returns a JSON object representing all the cookies whose consent was obtained.
-            - wrap(el, wrapper, type, text, heading): Adds 'privacy-msg' div element inside an iframe containing info about data security and obtain user’s consent
+            - wrap(el, wrapper, type, text, heading): Adds 'gdpr-privacy-msg' div element inside an iframe containing info about data security and obtain user’s consent
             - EnableContent(type): Enables the iframe content once user provides consent.
             - DisableContent(type,e): Disables the iframe content if user withdraws consent.
             - Init(UserConfig) : Initializes the instance with user provided configurations.
@@ -585,7 +587,7 @@
 
             function wrap(el, wrapper, type, text, heading, btnColor, textColor, imagePath, imageStatus, bgColor, buttonTextColor, btnText, btnShape) {
             el.parentNode.insertBefore(wrapper, el);
-            wrapper.className = 'privacy-msg privacy-' + type + '-msg';
+            wrapper.className = 'gdpr-privacy-msg privacy-' + type + '-msg';
             wrapper.style.width = el.clientWidth + 'px';
             wrapper.style.height = el.clientHeight + 'px';
             wrapper.innerHTML = imageStatus == 1 ? "<div class='bgComtainer-image'><img class='bg-image' src='" + window.location.origin +"/"+ imagePath + "'/><div class='overlay'></div>" : "";
