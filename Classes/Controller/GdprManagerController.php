@@ -119,6 +119,7 @@ class GdprManagerController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
                     'content' => '', // Default empty string
                     'button_text' => '', // Default empty string
                     'enable_background_image' => 0, // Default 0
+                    'heading_color' => '', // Default empty string
                     'background_image' => '', // Default empty string
                     'background_image_color' => '', // Default empty string
                     'button_color' => '', // Default empty string

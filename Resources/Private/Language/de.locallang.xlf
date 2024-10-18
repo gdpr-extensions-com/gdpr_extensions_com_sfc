@@ -11,7 +11,7 @@
           	<source>Content Styling</source>
           	<target>Inhaltsgestaltung</target>
         </trans-unit>
-				<trans-unit id="choose.file" resname="choose.file">
+		<trans-unit id="choose.file" resname="choose.file">
             <source>Choose file</source>
             <target>Datei auswählen</target>
         </trans-unit>

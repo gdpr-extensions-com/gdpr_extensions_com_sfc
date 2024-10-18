@@ -2,6 +2,7 @@
   "name": "gdpr-extensions-com/gdpr-extensions-com-sfc",
   "type": "typo3-cms-extension",
   "description": "Add your social feed through curator.io with our 2xClick solution where the users can manage their cookie preferences any time! ",
+  "version": "1.0.2",
   "authors": [],
   "license": "GPL-2.0-or-later",
   "require": {
