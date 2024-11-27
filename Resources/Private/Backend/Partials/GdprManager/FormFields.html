@@ -465,6 +465,10 @@
         width: 130px;
         bottom: -2px;
     }
+    .preview_img{
+        width: 40px !important;
+        height: 40px !important;
+    }
 
 </style>
 <div class="Curator2Click">
@@ -518,7 +522,7 @@
 <!-- accordion -->
 <div class="custom-accordion">
     <button type="button" class="accordion-toggle">
-        <f:image src="EXT:gdpr_extensions_com_tiktok/Resources/Public/Icons/dropdown.svg" />
+        <f:image src="EXT:gdpr_extensions_com_sfc/Resources/Public/Icons/dropdown.svg" />
         <f:translate key="tx_gdprextensionscomyoutube_domain_model_gdprmanager.ContentMask"
             extensionName="GdprExtensionsComSfc" />
     </button>
@@ -538,7 +542,7 @@
             <div class="file-upload-wrapper my-4-9" id="selected-image-container">
                 <button class="choose_file">
                     <f:translate key="choose.file" extensionName="GdprExtensionsComSfc" />
-                    <f:image src="EXT:gdpr_extensions_com_tiktok/Resources/Public/Icons/upload.svg" alt="" class="" />
+                    <f:image src="EXT:gdpr_extensions_com_sfc/Resources/Public/Icons/upload.svg" alt="" class="" />
                 </button>
                 <input type="file" id="file-input" name="image" accept="image/*"
                     class="file-upload-input btn-bg-transparent" />
@@ -546,22 +550,22 @@
             <f:if condition="{gdprManager.backgroundImage} == ''">
                 <f:then>
                     <div class="uploaded-image upload-btn">
-                        <f:image src="EXT:gdpr_extensions_com_tiktok/Resources/Public/Icons/Extension.svg"
+                        <f:image src="EXT:gdpr_extensions_com_sfc/Resources/Public/Icons/Extension.svg"
                             id="selected-image" alt="" class="back_img" />
                         <f:variable name="defaultImageUri"
-                            value="{f:uri.image(src: 'EXT:gdpr_extensions_com_tiktok/Resources/Public/Icons/gdpr-logo-icon.svg')}" />
+                            value="{f:uri.image(src: 'EXT:gdpr_extensions_com_sfc/Resources/Public/Icons/gdpr-logo-icon.svg')}" />
 
                     </div>
                 </f:then>
                 <f:else>
                     <div class="uploaded-image upload-btn">
-                        <f:image src="{gdprManager.backgroundImage}" id="selected-image" alt="" class="back_img" />
+                        <f:image src="{gdprManager.backgroundImage}" id="selected-image" alt="" class="back_img preview_img" />
                     </div>
                     <f:variable name="defaultImageUri"
-                        value="{f:uri.image(src: 'EXT:gdpr_extensions_com_tiktok/Resources/Public/Icons/gdpr-logo-icon.svg')}" />
+                        value="{f:uri.image(src: 'EXT:gdpr_extensions_com_sfc/Resources/Public/Icons/gdpr-logo-icon.svg')}" />
                 </f:else>
             </f:if>
-            <f:image src="EXT:gdpr_extensions_com_tiktok/Resources/Public/Icons/cancel.svg" alt="" class="cancel"
+            <f:image src="EXT:gdpr_extensions_com_sfc/Resources/Public/Icons/cancel.svg" alt="" class="cancel"
                 onclick="resetToDefaultImage('{defaultImageUri}')" />
             <f:form.textarea property="backgroundImage" id="backgroundImage" cols="40" rows="15" class="d-none" />
             <br />
@@ -585,7 +589,7 @@
     </div>
 
     <button type="button" class="accordion-toggle">
-        <f:image src="EXT:gdpr_extensions_com_tiktok/Resources/Public/Icons/dropdown.svg" />
+        <f:image src="EXT:gdpr_extensions_com_sfc/Resources/Public/Icons/dropdown.svg" />
         <f:translate key="tx_gdprextensionscomyoutube_domain_model_gdprmanager.CustomizeBtn"
             extensionName="GdprExtensionsComSfc" />
     </button>
@@ -649,7 +653,7 @@
     </div>
 
     <button type="button" class="accordion-toggle">
-        <f:image src="EXT:gdpr_extensions_com_tiktok/Resources/Public/Icons/dropdown.svg" />
+        <f:image src="EXT:gdpr_extensions_com_sfc/Resources/Public/Icons/dropdown.svg" />
         <f:translate key="tx_gdprextensionscomyoutube_domain_model_gdprmanager.CustomizeMsg"
             extensionName="GdprExtensionsComSfc" />
     </button>
